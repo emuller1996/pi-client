@@ -6,9 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import store from "./redux/store/index";
 import { Provider } from 'react-redux';
+import axios from 'axios';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
+axios.defaults.baseURL = process.env.REACT_APP_API;
+
 
 root.render(
   <StrictMode>
